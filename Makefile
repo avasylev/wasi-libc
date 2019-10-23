@@ -307,10 +307,10 @@ override MUSL_OMIT_HEADERS += \
     "netinet/ether.h" \
     "sys/timerfd.h"
 
-ifeq ($(THREAD_MODEL), single)
+# ifeq ($(THREAD_MODEL), single)
 # Remove headers not supported in single-threaded mode.
-override MUSL_OMIT_HEADERS += "aio.h" "pthread.h"
-endif
+# override MUSL_OMIT_HEADERS += "aio.h" "pthread.h"
+# endif
 
 default: check
 
