@@ -161,6 +161,12 @@ FILE *fdopen(int, const char *);
 FILE *popen(const char *, const char *);
 int pclose(FILE *);
 #endif
+
+/* FB patch - keep popen/pclose */
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+/* FB patch */
+
 int fileno(FILE *);
 int fseeko(FILE *, off_t, int);
 off_t ftello(FILE *);

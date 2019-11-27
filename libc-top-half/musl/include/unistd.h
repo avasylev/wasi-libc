@@ -151,6 +151,11 @@ int setpgid(pid_t, pid_t);
 pid_t setsid(void);
 pid_t getsid(pid_t);
 #endif
+
+/* FB patch - keep getpid */
+pid_t getpid(void);
+/* FB patch */
+
 #ifdef __wasilibc_unmodified_upstream /* WASI has no ttyname */
 char *ttyname(int);
 int ttyname_r(int, char *, size_t);
