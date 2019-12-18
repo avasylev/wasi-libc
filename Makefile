@@ -285,7 +285,6 @@ override MUSL_OMIT_HEADERS += \
     "sys/auxv.h" \
     "pwd.h" "shadow.h" "grp.h" \
     "mntent.h" \
-    "netdb.h" \
     "resolv.h" \
     "pty.h" \
     "dlfcn.h" \
@@ -306,6 +305,8 @@ override MUSL_OMIT_HEADERS += \
     "netinet/if_ether.h" \
     "netinet/ether.h" \
     "sys/timerfd.h"
+		# Enable some non-WASI headers needed for compilation in fbcode
+    # "netdb.h" \
 
 # ifeq ($(THREAD_MODEL), single)
 # Remove headers not supported in single-threaded mode.

@@ -113,7 +113,7 @@ size_t __ctype_get_mb_cur_max(void);
 int posix_memalign (void **, size_t, size_t);
 int setenv (const char *, const char *, int);
 int unsetenv (const char *);
-#ifdef __wasilibc_unmodified_upstream /* WASI has no temp directories */
+#ifdef __wasilibc_facebook_undefined /* WASI has no temp directories */
 int mkstemp (char *);
 int mkostemp (char *, int);
 char *mkdtemp (char *);

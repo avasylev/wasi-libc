@@ -47,7 +47,7 @@ int pipe2(int [2], int);
 #endif
 int close(int);
 int posix_close(int, int);
-#ifdef __wasilibc_unmodified_upstream /* WASI has no dup */
+#ifdef __wasilibc_facebook_undefined /* WASI has no dup */
 int dup(int);
 int dup2(int, int);
 int dup3(int, int, int);
